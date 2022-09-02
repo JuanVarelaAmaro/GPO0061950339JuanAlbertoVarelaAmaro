@@ -1,0 +1,110 @@
+#include <iostream>
+#include <string>
+#include <math.h>
+#include <conio.h>
+#include <cstring>
+
+
+using namespace std;
+
+int main()
+{
+    int PrecioUni, Total, opcion;
+
+    float Impuesto = 1.16;
+    string NumArt, NomVid, Lanz, Clasi, Carac, Desc, Genero;
+
+    cout << "\t ***Gamer's Stuff *** \n";
+    cout << "1.-Agregar Articulo \n2-. Modificar articulo \n3-. Eliminar Articulo \n4-. Lista de articulos vigentes \n5-. Limpiar pantalla \n6-. Salir\n";
+
+    cin >> opcion;
+    switch (opcion)
+    {
+    case 1://Agregar Articulo
+        cout << "Ingrese el numero del articulo \n";
+        cin >> NumArt;
+        cout << "Ingrese el nombre del videojuego \n";
+        cin.ignore();
+        getline(cin, NomVid);
+        cout << "Ingrese el año del lanzamiento\n";
+        cin.ignore();
+        getline(cin, Lanz);
+        cout << "Ingrese la clasificacion del videojuego\n";
+        cin.ignore();
+        getline(cin, Clasi);
+        cout << "Ingrese la caracteristicas del juego\n";
+        cin.ignore();
+        getline(cin, Carac);
+        cout << "Ingrese una descripcion\n";
+        cin.ignore();
+        getline(cin, Desc);
+        cout << "Ingrese el genero \n";
+        cin.ignore();
+        getline(cin, Genero);
+        cout << "Ingrese el precio del articulo \n";
+        cin >> PrecioUni;
+        cout << "Se le agregara un impuesto del 16 porciento de IVA \n";
+
+        Total = Impuesto * PrecioUni;
+
+        cout << "El precio total es de:" << Total << endl;
+        system("pause");
+        return main();
+
+        break;
+
+    case 2:
+
+        system("cls");
+        cout << "Elegir artiuclo a modificar \n";
+        system("pause");
+        return main();
+
+        break;
+
+    case 3:
+
+        system("cls");
+        cout << "Elegir articulo que desee eliminar \n";
+        system("pause");
+        return main();
+
+        break;
+
+    case 4:
+
+        system("cls");
+        cout << "Escoga el titulo que mas le interese \n";
+        system("pause");
+        return main();
+
+        break;
+
+    case 5:
+
+        system("cls");
+        cout << "Su pantalla esta limpia \n";
+        system("pause");
+        return main();
+
+        break;
+
+    case 6:
+
+        system("cls");
+        cout << "Esperamos que su experiencia haya sido agradable \n";
+        system("pause");
+
+        break;
+
+    default:
+
+        system("cls");
+        cout << "Seleccione una opcion valida\n";
+        system("pause");
+        return main();
+
+        break;
+
+    }
+}
